@@ -20,7 +20,7 @@ const orderRoutes = require("./routes/order.js");
 // [SECTION] Server Setup
 // Creates an "app" variable that stores the result of the "express" function that initializes our express application and allows us access to different methods that will make backend creation easy
 const app = express();
-const port = 4004;
+const port =  process.env.PORT || 4004;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Allows all resources to access our backend application
