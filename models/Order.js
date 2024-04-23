@@ -5,19 +5,11 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: [true, "User ID is required"],
   },
-  name: {
-    type: String,
-    required: [true, "User name is required"],
-  },
   productsOrdered: [
     {
       productId: {
         type: String,
         required: [true, "Product ID is required"],
-      },
-      productName: {
-        type: String,
-        required: [true, "Product Name is required"],
       },
       quantity: {
         type: Number,
