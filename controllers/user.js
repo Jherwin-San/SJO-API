@@ -171,9 +171,7 @@ module.exports.updateUserAsAdmin = async (req, res) => {
 
     // Check if the user is already an admin
     if (userToUpdate.isAdmin) {
-      userToUpdate.isAdmin = false;
-    updated = await userToUpdate.save();
-      return res.status(205).json("User is already an admin - reverted to user");   
+      return res.status(400).json("User is already an admin - no changes made");
     }
 
     userToUpdate.isAdmin = true;

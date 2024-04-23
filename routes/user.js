@@ -21,9 +21,6 @@ router.get("/details", verify, userController.getProfile);
 // PUT /users/set-as-admin - Set user as admin
 router.put("/set-as-admin", verify, verifyAdmin, userController.updateUserAsAdmin);
 
-// PUT /users/set-as-user - Set admin as user
-router.put("/set-as-user", verify, verifyAdmin, userController.updateAdminAsUser);
-
 // PUT /users/update-password - Update user password
 router.put("/update-password", verify, userController.updatePassword);
 
